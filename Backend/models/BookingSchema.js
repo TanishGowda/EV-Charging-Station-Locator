@@ -29,6 +29,10 @@ const bookingSchema = new mongoose.Schema({
       type: [Number],
       required: true
     }
+  }, 
+  stationName: {
+    type: String,
+    required: true
   },
   carType: {
     type: String,
@@ -39,11 +43,14 @@ const bookingSchema = new mongoose.Schema({
     required: true
   },
   chargingSlot: {
-    type: String, // Assuming format like "9:00 AM - 9:30 AM"
+    type: String, 
     required: true
   },
+  bookingDateTime: {
+    type: Date,
+    default: Date.now // Automatically set the date and time of booking
+  }
 }, { timestamps: true });
-
 
 
 // Create the Booking model

@@ -1,22 +1,39 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --timeout 10000",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@dicebear/avatars": "^4.10.8",
     "axios": "^1.6.8",
     "bcryptjs": "^2.4.3",
-    "body-parser": "^1.20.2",
+    "body-parser": "^1.20.3",
     "cors": "^2.8.5",
-    "express": "^4.19.2",
+    "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.3.1",
-    "nodemon": "^3.1.0"
-  }
+    "jwt-simple": "^0.5.6",
+    "mongoose": "^8.14.1",
+    "nodemon": "^3.1.0",
+    "twilio": "^5.0.4"
+  },
+  "devDependencies": {
+    "chai": "^4.5.0",
+    "chai-http": "^4.4.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.5.0",
+    "exceljs": "^4.4.0",
+    "mocha": "^11.3.0",
+    "nyc": "^17.1.0",
+    "supertest": "^7.1.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "description": ""
 }

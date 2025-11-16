@@ -1,11 +1,26 @@
 const mongoose = require('mongoose');
 
-
 const chargingStationSchema = new mongoose.Schema({
-    chargerType: String,
-    latitude: Number,
-    longitude: Number,
-    createdAt: { type: Date, default: Date.now }
+    chargerType: {
+        type: String,
+        required: true
+    },
+    stationName: {
+        type: String,
+        required: true
+    },
+    latitude: {
+        type: Number,
+        required: true
+    },
+    longitude: {
+        type: Number,
+        required: true
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    }
 });
 
 // Define model for charging station
